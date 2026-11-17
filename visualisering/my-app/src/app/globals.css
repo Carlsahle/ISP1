@@ -24,3 +24,38 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.sidebar-heading{
+  font-size: x-large;
+  font-weight: bolder;
+  color: white;
+  text-decoration:none;
+}
+
+
+.sidebar-link{
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration:none;
+  display: block;
+  margin-bottom:16px;
+  margin-top:16px;
+  width:auto;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.sidebar-active{
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration:none;
+  display: block;
+  margin-bottom:16px;
+  margin-top:16px;
+  width:auto;
+  padding: 10px;
+  background-color: #2563EB;
+  border-radius:15px;
+}
