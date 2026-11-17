@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.sidebar-heading{
+  font-size: x-large;
+  font-weight: bolder;
+  color: white;
+  text-decoration:none;
+}
+
+.sidebar-link{
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration:none;
+  display: block;
+  margin-bottom:16px;
+  margin-top:16px;
+  width:auto;
+  background-color: transparent;
+}
+
+.sidebar-active{
+  @extend .sidebar-link;
+  background-color: lightblue;
+  border-radius:15px;
+}
