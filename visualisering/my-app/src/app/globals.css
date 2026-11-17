@@ -32,6 +32,7 @@ body {
   text-decoration:none;
 }
 
+
 .sidebar-link{
   font-size: large;
   font-weight: bold;
@@ -45,7 +46,15 @@ body {
 }
 
 .sidebar-active{
-  @extend .sidebar-link;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration:none;
+  display: block;
+  margin-bottom:16px;
+  margin-top:16px;
+  width:auto;
+  background-color: transparent;
   background-color: lightblue;
   border-radius:15px;
 }

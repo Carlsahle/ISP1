@@ -17,8 +17,6 @@ export default function Sidebar(){
         case("/dashboard/company"):
             companyClassName = "sidebar-active"
             break;
-            
-      
     } 
 
     return(
