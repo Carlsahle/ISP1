@@ -1,1 +1,7 @@
 venv/
+prognos_48h/prognos_48.ipynb
+data/raw
+__pycache__/
+!data/raw/.gitkeep
+.DS_Store
+.ipynb_checkpoints/
