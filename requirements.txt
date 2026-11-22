@@ -2,3 +2,5 @@ pandas
 lightgbm
 scikit-learn
 openpyxl
+requests
+numpy
