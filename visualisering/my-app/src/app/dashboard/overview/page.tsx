@@ -1,13 +1,10 @@
 import EffectLineChart from "../components/charts/EffectLineChart";
 import EffectBarChart from "../components/charts/EffectBarChart";
 
-const actualData = [
+const data = [
     { time: "08:00", effect: 4 },
     { time: "10:00", effect: 5 },
-    { time: "12:00", effect: 7 }
-];
-
-const forecastData = [
+    { time: "12:00", effect: 7 },
     { time: "14:00", effect: 6 },
     { time: "16:00", effect: 8 },
     { time: "18:00", effect: 5 }
@@ -36,7 +33,7 @@ export default function Overview(){
             <section className="data-cards">
                 <section className="data-card">
                     <h2> Effektbehov över tid </h2>
-                    <EffectLineChart actualData={actualData} forecastData={forecastData}/>
+                    <EffectLineChart data={data} />
                 </section>
             </section>
 

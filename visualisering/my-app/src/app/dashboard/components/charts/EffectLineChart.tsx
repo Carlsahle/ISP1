@@ -8,20 +8,17 @@ type Measurment = {
 }
 
 type LineChartProp = {
-    actualData: Measurment[];
-    forecastData: Measurment[];
+    data: Measurment[];
 }
 
-export default function EffectLineChart({actualData, forecastData}: LineChartProp){
-    const chartData = [... actualData.map(item => item.time), 
-                       ... forecastData.slice(1).map(item=>item.time)];
+
+export default function EffectLineChart({data}: LineChartProp){
 
     return(
-        <LineChart width={500} height={300}>
-            <XAxis ticks={chartData}/>
+        <LineChart data={data} width={500} height={300}>
+            <XAxis dataKey={"time"}/>
             <YAxis/>
-            <Line data={actualData} dataKey={"effect"}/>
-            <Line data={forecastData} dataKey={"effect"} strokeDasharray={"5 5"}/>
+            <Line dataKey={"effect"}/>
         </LineChart>
     );
 }
