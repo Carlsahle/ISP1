@@ -25,37 +25,84 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.sidebar{
+  width: 256px;
+  color: white;
+  min-height:max-content;
+  background-color: #0f172a;
+}
+
+
 .sidebar-heading{
   font-size: x-large;
   font-weight: bolder;
   color: white;
-  text-decoration:none;
+  padding: 10px
 }
 
 
 .sidebar-link{
   font-size: large;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   color: white;
-  text-decoration:none;
-  display: block;
-  margin-bottom:16px;
-  margin-top:16px;
+  margin:16px;
   width:auto;
   padding: 10px;
-  background-color: transparent;
 }
 
 .sidebar-active{
   font-size: large;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   color: white;
-  text-decoration:none;
-  display: block;
-  margin-bottom:16px;
-  margin-top:16px;
+  margin:16px;
   width:auto;
   padding: 10px;
   background-color: #2563EB;
-  border-radius:15px;
+  border-radius:16px;
+}
+
+.data-cards{
+  display: flex;
+  margin-top: 32px;
+  gap: 20px;
+}
+
+.data-card{
+  background-color: #0f172a;
+  padding: 10px;
+  border-radius: 16px;
+  flex: 1;
+}
+
+.data-card h2{
+  font-size: 32px;
+}
+
+.data-card h3{
+  font-size: 64px;
+}
+
+.data-card p{
+  font-size:16px;
+}
+
+.dashboard-content{
+  flex:1;
+  padding: 16px;
+  background-color:#090e1a ;
+}
+
+.dashboard-content h1{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.dashboard-content h2{
+  font-size: 16px 
 }

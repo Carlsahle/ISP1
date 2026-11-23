@@ -20,17 +20,19 @@ export default function Sidebar(){
     } 
 
     return(
-        <nav className="w-64 min-h-screen bg-slate-900 text-white p-6">
+        <nav className="sidebar">
             <h1 className="sidebar-heading"> 
                 Vårgårda Industriområde
             </h1>
             <div>
                 
                 <Link className= {overviewClassName} href="/dashboard/overview">
+                    <img src="/factory.svg"/>
                     Översikt
                 </Link>
 
                 <Link className= {companyClassName} href="/dashboard/company">
+                    <img src="/house.svg"/>
                     Mitt företag
                 </Link>
 
