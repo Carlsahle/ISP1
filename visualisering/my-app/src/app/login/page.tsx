@@ -1,60 +1,56 @@
 'use client';
 
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import './style.css'; 
+import './style.css';
 
-const FORETAG_EMAILS = ['a@grupp19.se', 'b@grupp19.se', 'c@grupp19.se', 'd@grupp19.se'];
-
-export default function LoginPage() {
+export default function SelectPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const normalizedEmail = email.toLowerCase().trim();
-
-    if (password === '123') {
-      if (normalizedEmail === 'admin@grupp19.se') {
-        return router.push('/dashboard');
-      }
-      if (FORETAG_EMAILS.includes(normalizedEmail)) {
-        return router.push('/foretag');
-      }
-    }
-
-    alert('Felaktig e-post eller lösenord');
+  const handleSelectCompany = (companyId: string) => {
+    router.push(`/dashboard/${companyId}/company`);
   };
 
   return (
     <main className="mainContainer">
       <div className="card">
-        <h1 className="title">Logga in</h1>
+        <h1 className="title">Välj</h1>
 
-        <form onSubmit={handleLogin} className="form">
-          <input 
-            type="email" 
-            placeholder="E-post" 
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="input"
-          />
-          
-          <input 
-            type="password" 
-            placeholder="Lösenord" 
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="input"
-          />
+        <div className="form">
+          <button
+            onClick={() => router.push('/dashboard/foretag1/overview')}
+            className="button"
+          >
+            Dashboard
+          </button>
 
-          <button type="submit" className="button">Logga in</button>
-        </form>
+          <hr />
+
+          <button
+            onClick={() => handleSelectCompany('foretag1')}
+            className="button"
+          >
+            Företag 1
+          </button>
+          <button
+            onClick={() => handleSelectCompany('foretag2')}
+            className="button"
+          >
+            Företag 2
+          </button>
+          <button
+            onClick={() => handleSelectCompany('foretag3')}
+            className="button"
+          >
+            Företag 3
+          </button>
+          <button
+            onClick={() => handleSelectCompany('foretag4')}
+            className="button"
+          >
+            Företag 4
+          </button>
+        </div>
 
         <p className="footerText">
           <Link href="/">Tillbaka</Link>
