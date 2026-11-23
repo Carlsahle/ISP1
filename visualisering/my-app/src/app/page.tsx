@@ -31,7 +31,7 @@ export default function LandingPage() {
           
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
-              Innovatum Science Park <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-400"></span>
+              Inovatum Science Park <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-400"></span>
             </h1>
 
             <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
@@ -39,17 +39,10 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-              <Link
-                href="/login"
-                className="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-100 font-semibold rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2 text-sm"
-              >
-                Gå till plattformen
-                
-              </Link>
+             
             </div>
           </div>
-          
-        
+
 
         </div>
       </main>
