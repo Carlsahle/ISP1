@@ -33,7 +33,7 @@ export default function Overview(){
             <section className="data-cards">
                 <section className="data-card">
                     <h2> Effektbehov över tid </h2>
-                    <EffectLineChart data={data} />
+                    <EffectLineChart />
                 </section>
             </section>
 

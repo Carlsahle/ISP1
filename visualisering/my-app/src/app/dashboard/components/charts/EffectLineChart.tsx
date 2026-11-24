@@ -3,18 +3,32 @@
 import {useState} from "react";
 import{LineChart,Line,XAxis,YAxis} from "recharts";
 
-type Measurment = {
-    time: string;
-    effect: number;
-}
+const data48h = [
+    { time: "00:00", effect: 4 },
+    { time: "06:00", effect: 5 },
+    { time: "12:00", effect: 7 },
+    { time: "18:00", effect: 6 },
+];
 
-type LineChartProp = {
-    data: Measurment[];
-}
+const data14d = [
+    { time: "Mån", effect: 4 },
+    { time: "Tis", effect: 5 },
+    { time: "Ons", effect: 7 },
+    { time: "Tor", effect: 6 },
+    { time: "Fre", effect: 8 },
+    { time: "Lör", effect: 5 },
+    { time: "Sön", effect: 6 },
+];
 
 
-export default function EffectLineChart({data}: LineChartProp){
+export default function EffectLineChart(){
     const [period, setPeriod] = useState("48h");
+
+    let chartData=data48h
+
+    if (period == "14d"){
+        chartData=data14d
+    }
 
     return(
         <div>
@@ -23,7 +37,7 @@ export default function EffectLineChart({data}: LineChartProp){
                 <option value="14d">14 dagar</option>
             </select>
 
-            <LineChart data={data} width={500} height={300}>
+            <LineChart data={chartData} width={500} height={300}>
                 <XAxis dataKey={"time"}/>
                 <YAxis/>
                 <Line dataKey={"effect"}/>
