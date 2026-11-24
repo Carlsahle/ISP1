@@ -1,4 +1,5 @@
 import EffectLineChart from "../components/charts/EffectLineChart";
+import DropDown from "../components/Dropdown";
 
 const data = [
     { time: "08:00", effect: 4 },
@@ -30,7 +31,7 @@ export default function Company(){
 
             <section className="data-cards">
                 <section className="data-card">
-                    <EffectLineChart data={data}/>
+                    <DropDown/>
                 </section>
             </section>
 

@@ -8,7 +8,7 @@ export default function SelectPage() {
   const router = useRouter();
 
   const handleSelectCompany = (companyId: string) => {
-    router.push(`/dashboard/${companyId}/company`);
+    router.push(`/dashboard/${companyId}`);
   };
 
   return (
