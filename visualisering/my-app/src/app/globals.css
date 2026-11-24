@@ -106,3 +106,14 @@ body {
 .dashboard-content h2{
   font-size: 16px 
 }
+
+.period-dropdown {
+  background-color: #2563EB;
+  padding:12px;
+  border-radius:16px;
+}
+
+.period-dropdown-option {
+  padding: 12px ;
+  border-radius: 16px;
+}

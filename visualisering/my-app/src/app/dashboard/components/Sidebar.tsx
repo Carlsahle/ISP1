@@ -6,15 +6,16 @@ import { usePathname } from "next/navigation";
 
 export default function Sidebar(){
     const pathname = usePathname();
+    const companyID = pathname.split("/")[2];
     let overviewClassName = "sidebar-link"
     let companyClassName = "sidebar-link"
 
-    switch(pathname){
-        case("/dashboard/overview"):
+    switch(pathname.split("/")[3]){
+        case("overview"):
             overviewClassName = "sidebar-active";
             break;
 
-        case("/dashboard/company"):
+        case("company"):
             companyClassName = "sidebar-active"
             break;
     } 
@@ -26,12 +27,12 @@ export default function Sidebar(){
             </h1>
             <div>
                 
-                <Link className= {overviewClassName} href="/dashboard/overview">
+                <Link className= {overviewClassName} href={`/dashboard/${companyID}/overview`} >
                     <img src="/factory.svg"/>
                     Översikt
                 </Link>
 
-                <Link className= {companyClassName} href="/dashboard/company">
+                <Link className= {companyClassName} href={`/dashboard/${companyID}/company`}>
                     <img src="/house.svg"/>
                     Mitt företag
                 </Link>
