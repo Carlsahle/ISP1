@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import './style.css';
 
 export default function SelectPage() {
   const router = useRouter();
@@ -19,12 +18,12 @@ export default function SelectPage() {
         <div className="form">
           <button
             onClick={() => router.push('/dashboard/foretag1/overview')}
-            className="button"
+            className="button buttonPrimary"
           >
             Dashboard
           </button>
 
-          <hr />
+          <hr className="divider" />
 
           <button
             onClick={() => handleSelectCompany('foretag1')}
