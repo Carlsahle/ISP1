@@ -1,6 +1,7 @@
 venv/
 prognos_48h/prognos_48.ipynb
 data/raw
+data/processed
 __pycache__/
 !data/raw/.gitkeep
 .DS_Store
