@@ -1,7 +1,7 @@
 import pandas as pd
 
 def make_forecast(history, day):
-
+    day = pd.Timestamp(day).normalize()
     # Calculate the date one week before day
     last_week = day - pd.Timedelta(days=7)
 
@@ -14,5 +14,7 @@ def make_forecast(history, day):
     rows["tid"] = rows["tid"] + pd.Timedelta(days=7)
 
     # return company, time, kw
+    if rows.empty:
+        raise ValueError(f"No data for {last_week.date()}")
     return rows
 
